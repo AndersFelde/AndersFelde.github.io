@@ -46,13 +46,14 @@
             border-radius: 2.25em !important;
         }
     </style>
+    <script type="javascript">
+
+
+    </script>
 </head>
 
 <body>
 
-    <script type="javascript">
-
-    </script>
 
     <div style="width: 100%;">
 
@@ -70,7 +71,7 @@
                         <div id="question-body" class="d-flex flex-column justify-content-center align-items-center shadow">
                             <img class="question-thumbnail question-content" style="width: 10%" src="https://www.pngkit.com/png/detail/296-2967118_conclusion-finance-icon.png">
                             <h5 class="card-title question-title question-content">Generasjonsplanlegging</h5>
-                            <p class="card-text text-center question-text question-content">Har du en klar plan for hvordan verdiene skal videreføres til neste generasjon?</p>
+                            <p id="question-text" class="card-text text-center question-text question-content">Har du en klar plan for hvordan verdiene skal videreføres til neste generasjon?</p>
                             <div class="w-75 question-content card-text d-flex justify-content-between">
                                 <!-- <div class="answer-yes"> -->
                                 <button onclick="nextQuestion(0)" id="no-button" type="button" class="btn btn-danger">
@@ -80,7 +81,8 @@
                                     Nei
                                 </button>
                                 <!-- </div> -->
-                                <button type="button" class="btn btn-secondary">Skip</button>
+                                <!--                           BUG: Skip er egt samme som å svare nei       -->
+                                <button type="button" onclick="nextQuestion(0)" class="btn btn-secondary">Skip</button>
                                 <button onclick="nextQuestion(1)" id="yes-button" type="button" class="btn btn-success">
                                     <!-- <div class="answer-no"> -->
                                     Ja
@@ -99,8 +101,19 @@
     </div>
 
     <script type="text/javascript">
+        questionText = document.querySelector("#question-text");
+        questions = ["Økonomi spørsmål 1", "Familie spørsmål 1", "Barn spørsmål", "Økoonomi spørsmål 2", "Barn spørsmål 2"];
+        questionTypes = ["okonomi", "familie", "barn", "okonomi", "barn"];
+        types = {
+            "okonomi": 0,
+            "familie": 0,
+            "barn": 0
+        }
+        answers = [];
+        counter = 0;
+
         qCount = 0;
-        qTotal = 10;
+        qTotal = questions.length;
         qPercentage = 100 / qTotal;
 
         progressBar = document.querySelector("#questionProgress");
@@ -113,14 +126,39 @@
 
 
 
+
+
         updateCount()
+        loadQuestion()
 
         function nextQuestion(a) {
             console.log(a);
-            if (qCount < qTotal) {
-                updateCount()
+            if (qCount <= qTotal) {
+                answers[qCount - 1] = parseInt(a);
+                types[questionTypes[qCount - 1]] += parseInt(a);
+                if (qCount == qTotal) {
+                    finish()
+                } else {
+                    updateCount()
+                    loadQuestion()
+                }
             }
+            console.log(questions);
+            console.log(answers);
+            console.log(types);
 
+        }
+
+        function finish() {
+            sessionStorage.setItem("questions", questions);
+            sessionStorage.setItem("answers", answers);
+            sessionStorage.setItem("types", JSON.stringify(types));
+            alert("Du er ferdig")
+            window.location.href = "file:///C:/Users/Anders%20K%20Felde/Desktop/sindreNettside/chart.html"
+        }
+
+        function loadQuestion() {
+            questionText.innerHTML = questions[qCount - 1];
         }
 
         function updateCount() {
