@@ -1,5 +1,5 @@
 //questions = ["Økonomi spørsmål 1", "Familie spørsmål 1", "Barn spørsmål", "Økoonomi spørsmål 2", "Barn spørsmål 2"];
-questions = [
+const questions = [
   'Har du 100% oversikt over alle dine verdier',
   'Føler du deg ivaretatt og fulgt opp på en god måte der du har pengene din idag?',
   'Har du tatt riktige valg for hvor mye penger du skal ha på bankkonto, i eiendom og i investeringer som kan gi bedre avkastning?',
@@ -13,7 +13,7 @@ questions = [
 ];
 
 //questionTypes = ["okonomi", "familie", "barn", "okonomi", "barn"];
-questionTypes = [
+const questionTypes = [
   'oversikt',
   'oppfolging',
   'riktig_investert',
@@ -25,7 +25,7 @@ questionTypes = [
   'skatt',
   'total',
 ];
-questionTypesNice = [
+const questionTypesNice = [
   'Oversikt',
   'Oppfølgning',
   'Riktig investert?',
@@ -38,30 +38,30 @@ questionTypesNice = [
   'Totalt',
 ];
 
-types = {};
+var types = {};
 for (var i = 0; i < questionTypes.length; i++) {
   types[questionTypes] = 0;
 }
 
-answers = [];
-counter = 0;
+var answers = [];
+var counter = 0;
 
-qCount = 0;
-qTotal = questions.length;
-qPercentage = 100 / qTotal;
+var qCount = 0;
+const qTotal = questions.length;
+const qPercentage = 100 / qTotal;
 
-questionText = document.querySelector('#question-text');
-questionImage = document.querySelector('#question-image');
-questionType = document.querySelector('#question-type');
-progressBar = document.querySelector('#questionProgress');
-qCountElm = document.querySelector('#question-current');
-qTotalElm = document.querySelector('#question-total');
+const referenceButton = document.querySelector('#reference-button');
+const questionText = document.querySelector('#question-text');
+const questionImage = document.querySelector('#question-image');
+const questionType = document.querySelector('#question-type');
+const progressBar = document.querySelector('#questionProgress');
+const qCountElm = document.querySelector('#question-current');
+const qTotalElm = document.querySelector('#question-total');
 qTotalElm.innerHTML = qTotal;
 
-yesButton = document.querySelector('#yes-button');
-noButton = document.querySelector('#no-button');
-var finishModal = new bootstrap.Modal(document.getElementById('finishModal'));
-
+const yesButton = document.querySelector('#yes-button');
+const noButton = document.querySelector('#no-button');
+const finishModal = new bootstrap.Modal(document.getElementById('finishModal'));
 updateCount();
 loadQuestion();
 
@@ -86,8 +86,10 @@ function finish() {
   //sessionStorage.setItem("types", JSON.stringify(types));
 
   if (answers[answers.length - 1] == 1) {
+    referenceButton.href = 'https://itavisen.no';
     finishModal.toggle();
   } else {
+    referenceButton.href = 'https://dagbladet.no';
     finishModal.toggle();
     console.log('joe');
   }
