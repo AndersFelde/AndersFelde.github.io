@@ -1,0 +1,16 @@
+.progress-div {
+    width: 16rem !important;
+    margin: 0 auto 0 auto !important;
+}
+
+.quiz-card {
+    width: 17rem !important;
+}
+
+#question-body {
+    height: 17rem !important;
+}
+
+#question-buttons {
+    margin-top: 5rem !important;
+}

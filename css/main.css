@@ -1,0 +1,54 @@
+.quiz-question-flex {
+    margin-top: 1%;
+}
+
+.quiz-card {
+    width: 30rem;
+}
+
+#question-image {
+    display: block;
+    margin: auto;
+    width: 40%;
+    bottom: 0;
+}
+
+
+.question-text {
+    line-height: 1.5rem;
+    height: 4rem;
+}
+
+.question-thumbnail {
+    width: 20%;
+}
+
+#question-body {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.question-content {
+    margin-top: 5%;
+}
+
+.inline-icon {
+    vertical-align: bottom;
+    font-size: 19px !important;
+}
+
+
+.progress-div {
+    width: 30rem;
+    display: block;
+    margin: 3rem auto 0 auto;
+    text-align: center;
+}
+
+.shadow-lg,
+.shadow {
+    border-radius: 2.25em !important;
+}
+
+.quiz-card {
+    border-radius: 2.25em !important;
+}
