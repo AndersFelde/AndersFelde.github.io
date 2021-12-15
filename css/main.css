@@ -116,3 +116,11 @@
 .modal-backdrop {
     opacity: 0 !important;
 }
+
+#kontakt-modal .resultater-top {
+    height: 10rem !important;
+}
+
+#kontakt-modal .resultater-top img {
+    width: 90% !important;
+}
