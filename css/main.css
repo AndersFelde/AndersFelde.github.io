@@ -148,3 +148,13 @@
     background-color: #817D9D !important;
     border-color: #817D9D !important;
 }
+
+.modal a:hover {
+    background-color: #094e5c;
+    border-color: #094e5c;
+}
+
+#kontakt-modal a:hover {
+    background-color: #817D9D !important;
+    border-color: #817D9D !important;
+}
