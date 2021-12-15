@@ -40,7 +40,7 @@ const questionTypesNice = [
 
 var types = {};
 for (var i = 0; i < questionTypes.length; i++) {
-  types[questionTypes] = 0;
+  types[questionTypes[i]] = 0;
 }
 
 var answers = [];
@@ -57,26 +57,31 @@ const questionType = document.querySelector('#question-type');
 const progressBar = document.querySelector('#questionProgress');
 const qCountElm = document.querySelector('#question-current');
 const qTotalElm = document.querySelector('#question-total');
+const qSkipBtn = document.querySelector('#question-skip-btn');
 qTotalElm.innerHTML = qTotal;
 
 const yesButton = document.querySelector('#yes-button');
 const noButton = document.querySelector('#no-button');
 const finishModal = new bootstrap.Modal(document.getElementById('finishModal'));
+finishModal.toggle();
 updateCount();
 loadQuestion();
 
 function nextQuestion(a) {
-  console.log(a);
   if (qCount <= qTotal) {
-    answers[qCount - 1] = parseInt(a);
-    types[questionTypes[qCount - 1]] += parseInt(a);
+    answers[qCount - 1] = a;
+    types[questionTypes[qCount - 1]] = parseInt(a);
+    console.log(types);
 
     if (qCount == qTotal) {
       finish();
-    } else {
-      updateCount();
-      loadQuestion();
+      return;
     }
+    if (qCount == qTotal - 1) {
+      qSkipBtn.style = 'visibility: hidden;';
+    }
+    updateCount();
+    loadQuestion();
   }
 }
 
@@ -91,7 +96,6 @@ function finish() {
   } else {
     referenceButton.href = 'https://dagbladet.no';
     finishModal.toggle();
-    console.log('joe');
   }
   //document.querySelector("#question-div").style.display = "none"
   //document.querySelector("#chart-div").style.display = "block"

@@ -31,7 +31,7 @@
                                 Nei
                             </button>
                             <!--                           BUG: Skip er egt samme som å svare nei       -->
-                            <button type="button" onclick="nextQuestion(0)" class="btn btn-secondary">Skip</button>
+                            <button type="button" onclick="nextQuestion(-1)" id="question-skip-btn" class="btn btn-secondary">Skip</button>
                             <button onclick="nextQuestion(1)" id="yes-button" type="button" class="btn btn-success">
                                 Ja
 
@@ -47,17 +47,47 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Hva nå?</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">Ditt resultat</h5>
                     <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                 </div>
                 <div class="modal-body">
-                    <!-- <a href="https://vg.no" target="_top">LINK</a> -->
-                    <a type="button" href="https://vg.no" target="_top" class="btn btn-secondary">Hjem</a>
-                    <a id="reference-button" type="button" href="https://dagbladet.no" target="_top" class="btn btn-primary">Få hjelp</a>
-                </div>
-                <div class="modal-footer">
+                    <div id="wrapper" class="d-flex flex-column justify-content-center align-items-center">
+                        <div class="resultater-top d-flex ">
+                            <div id="text" class="d-flex align-items-center">
+
+                                <p>Vi anbefaler deg å kontakte banken din i forbindelse med investeringer i aksjer og fond</p>
+                            </div>
+                            <div>
+                                <img src="icons/farger/savings-pig-outline.png">
+
+                            </div>
+                        </div>
+                        <div class="resultater-middle d-flex flex-column align-items-stretch">
+                            <div>Dette er punkter vi mener du har forbedringspotensiale</div>
+                            <div id="potensials" class="d-flex flex-column justify-content-evenly">
+                                <div id="potensial-1"><img src="icons/farger/skatt.png"><span>Skatt</span></div>
+                                <div id="potensial-2"><img src="icons/farger/barekraft.png"><span>Bærekraft</span></div>
+                                <div id="potensial-3"><img src="icons/farger/viktige_dokumenter.png"><span>Viktige dokumenter</span></div>
+                            </div>
+
+                        </div>
+                        <div class="resultater-bottom d-flex justify-content-between">
+                            <div id="text" class="d-flex flex-column">
+                                <div>Meld deg gjerne på vårt nyhetsbrev for å motta nyttig informasjon</div>
+
+                                <div id="btn"><a id="reference-button" type="button" href="https://dagbladet.no" target="_top" class="btn btn-primary">Meld deg på</a></div>
+
+                            </div>
+                            <div id="img-div">
+                                <img src="icons/farger/resultat.png" </div>
+                            </div>
+                            <!-- <a href="https://vg.no" target="_top">LINK</a> -->
+                            <!-- <a type="button" href="https://vg.no" target="_top" class="btn btn-secondary">Hjem</a> -->
+                        </div>
+                        <!-- <div class="modal-footer">
+                </div> -->
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 </body>

@@ -52,3 +52,63 @@
 .quiz-card {
     border-radius: 2.25em !important;
 }
+
+.modal-body #wrapper {
+    padding: 1rem;
+}
+
+.resultater-top {
+    height: 8rem;
+}
+
+.resultater-top img {
+    width: 70%;
+    margin-top: -1.5rem;
+    margin-left: 1rem;
+    /* display: block; */
+    /* margin: auto; */
+}
+
+.resultater-top #text {
+    width: 140%;
+}
+
+.resultater-middle {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.resultater-middle #potensials {
+    height: 10rem;
+    margin-left: 1rem;
+}
+
+.resultater-middle img {
+    height: 2.5rem;
+}
+
+.resultater-middle span {
+    margin-left: 0.5rem;
+}
+
+.resultater-bottom {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.resultater-bottom #text {
+    width: 11rem;
+}
+
+.resultater-bottom #img-div {
+    width: 16rem;
+}
+
+.resultater-bottom img {
+    width: 100%;
+}
+
+.resultater-bottom #btn {
+    margin-top: 1rem;
+
+}
