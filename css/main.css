@@ -1,3 +1,12 @@
+@font-face {
+    font-family: NexaLight;
+    src: url('fonts/NexaLight.otf');
+}
+
+* {
+    font-family: NexaLight;
+}
+
 .quiz-question-flex {
     margin-top: 1%;
 }
