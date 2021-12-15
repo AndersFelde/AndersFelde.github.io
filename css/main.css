@@ -79,7 +79,7 @@
 }
 
 .resultater-middle #potensials {
-    height: 10rem;
+    /* height: 10rem; */
     margin-left: 1rem;
 }
 
@@ -101,7 +101,7 @@
 }
 
 .resultater-bottom #img-div {
-    width: 16rem;
+    width: 15rem;
 }
 
 .resultater-bottom img {

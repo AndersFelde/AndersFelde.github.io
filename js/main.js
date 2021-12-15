@@ -100,21 +100,25 @@ function finish() {
 
   if (answers[answers.length - 1] == 1) {
     resultModalElm.children[0].id = 'kontakt-modal';
-    resultModal.toggle();
   } else {
-    resultModalElm.querySelector('#kontakt-btn').style = 'display: none';
-    resultModalElm.querySelector('#modal-top-text').innerHTML =
-      'Vi anbefaler deg å kontakte banken din i forbindelse med investeringer i aksjer og fond';
-    resultModalElm.querySelector('#modal-middle-text').innerHTML =
-      'Dette er punkter vi mener du har forbedringspotensiale på';
-    resultModalElm.querySelector('#modal-top-image').src =
-      'icons/farger/savings-pig-outline.png';
-
-    resultModal.toggle();
+    updateModalInfo();
   }
+
+  setModalSuggestions();
+  resultModal.toggle();
   //document.querySelector("#question-div").style.display = "none"
   //document.querySelector("#chart-div").style.display = "block"
   //drawChart()
+}
+
+function updateModalInfo() {
+  resultModalElm.querySelector('#kontakt-btn').style = 'display: none';
+  resultModalElm.querySelector('#modal-top-text').innerHTML =
+    'Vi anbefaler deg å kontakte banken din i forbindelse med investeringer i aksjer og fond';
+  resultModalElm.querySelector('#modal-middle-text').innerHTML =
+    'Dette er punkter vi mener du har forbedringspotensiale på';
+  resultModalElm.querySelector('#modal-top-image').src =
+    'icons/farger/savings-pig-outline.png';
 }
 
 function loadQuestion() {
@@ -148,13 +152,23 @@ function updateProgress(i, currentPercent, addingPercentage) {
   }, 20);
 }
 
-function setModalSuggestions(isDefault) {
-  if (isDefault) {
-    const potensials = document.querySelector('#default-modal #potensials');
-  } else {
-    const potensials = document.querySelector('#kontakt-modal #potensials');
+function setModalSuggestions() {
+  const potensials = document.querySelector('#potensials');
+  console.log(potensials);
+  console.log(answers);
+
+  for (var i = 0; i < answers.length; i++) {
+    console.log(answers[i]);
+    if (answers[i] == 1) {
+      var clone = potensials.children[0].cloneNode(true);
+      console.log(clone);
+      clone.querySelector('img').src =
+        'icons/farger/' + questionTypes[i] + '.png';
+      clone.querySelector('span').innerHTML = questionTypesNice[i];
+      potensials.appendChild(clone);
+    }
   }
 
-  console.log(potensials);
+  potensials.children[0].style = 'display: none;';
 }
 //types = JSON.parse(sessionStorage.getItem("types"))
