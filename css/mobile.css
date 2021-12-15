@@ -36,3 +36,8 @@
     font-size: 0.75rem !important;
     padding: 0.5rem !important;
 }
+
+.resultater-middle,
+.resultater-bottom {
+    margin-top: 0.5rem !important;
+}
