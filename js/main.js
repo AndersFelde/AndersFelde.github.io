@@ -157,9 +157,12 @@ function setModalSuggestions() {
   console.log(potensials);
   console.log(answers);
 
+  var amountOfPotensials = 0;
+
   for (var i = 0; i < answers.length; i++) {
     console.log(answers[i]);
-    if (answers[i] == 1) {
+    if (answers[i] == 0) {
+      amountOfPotensials += 1;
       var clone = potensials.children[0].cloneNode(true);
       console.log(clone);
       clone.querySelector('img').src =
@@ -170,5 +173,10 @@ function setModalSuggestions() {
   }
 
   potensials.children[0].style = 'display: none;';
+
+  if (amountOfPotensials == 0) {
+    document.querySelector('.resultater-middle').style =
+      'display: none !important;';
+  }
 }
 //types = JSON.parse(sessionStorage.getItem("types"))
