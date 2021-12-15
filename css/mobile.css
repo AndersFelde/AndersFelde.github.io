@@ -24,14 +24,6 @@
     height: 6rem !important;
 }
 
-.resultater-top #potensials {
-    height: 8rem !important;
-}
-
-.resultater-top #potensials {
-    height: 2rem !important;
-}
-
 .resultater-bottom a,
 #kontakt-modal .resultater-top a {
     font-size: 0.75rem !important;
@@ -47,4 +39,17 @@
     width: 100% !important;
     margin-top: 0 !important;
     margin-left: 0 !important;
+}
+
+#kontakt-modal .resultater-middle #potensials {
+    height: 8rem !important;
+}
+
+#kontakt-modal .resultater-middle,
+#kontakt-modal .resultater-bottom {
+    margin-top: 0 !important;
+}
+
+#kontakt-modal .resultater-bottom .text {
+    width: 12rem !important;
 }
