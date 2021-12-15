@@ -62,7 +62,7 @@
 }
 
 .resultater-top img {
-    width: 70%;
+    width: 100%;
     margin-top: -1.5rem;
     margin-left: 1rem;
     /* display: block; */
@@ -70,7 +70,7 @@
 }
 
 .resultater-top #text {
-    width: 140%;
+    width: 250%;
 }
 
 .resultater-middle {
