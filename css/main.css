@@ -3,6 +3,11 @@
     src: url('fonts/NexaLight.otf');
 }
 
+@font-face {
+    font-family: NexaBold;
+    src: url('fonts/NexaBold.otf');
+}
+
 * {
     font-family: NexaLight;
 }
