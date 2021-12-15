@@ -45,10 +45,15 @@
     height: 8rem !important;
 }
 
-#kontakt-modal .resultater-middle,
-#kontakt-modal .resultater-bottom {
+#kontakt-modal .resultater-middle {
     margin-top: 0 !important;
 }
+
+#kontakt-modal .resultater-bottom {
+    margin-top: 0.6rem !important
+}
+
+
 
 #kontakt-modal .resultater-bottom .text {
     width: 12rem !important;
