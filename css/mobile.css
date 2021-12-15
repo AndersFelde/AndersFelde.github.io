@@ -32,7 +32,8 @@
     height: 2rem !important;
 }
 
-.resultater-bottom a {
+.resultater-bottom a,
+#kontakt-modal .resultater-top a {
     font-size: 0.75rem !important;
     padding: 0.5rem !important;
 }
@@ -40,4 +41,10 @@
 .resultater-middle,
 .resultater-bottom {
     margin-top: 0.5rem !important;
+}
+
+#kontakt-modal .resultater-top img {
+    width: 100% !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
 }
