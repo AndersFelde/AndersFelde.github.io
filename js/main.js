@@ -50,7 +50,7 @@ var qCount = 0;
 const qTotal = questions.length;
 const qPercentage = 100 / qTotal;
 
-const referenceButton = document.querySelector('#reference-button');
+// const referenceButton = document.querySelector('#reference-button');
 const questionText = document.querySelector('#question-text');
 const questionImage = document.querySelector('#question-image');
 const questionType = document.querySelector('#question-type');
@@ -62,8 +62,16 @@ qTotalElm.innerHTML = qTotal;
 
 const yesButton = document.querySelector('#yes-button');
 const noButton = document.querySelector('#no-button');
-const finishModal = new bootstrap.Modal(document.getElementById('finishModal'));
-finishModal.toggle();
+const resultModalElm = document.querySelector('#result-modal');
+const resultModal = new bootstrap.Modal(
+  document.getElementById('result-modal')
+);
+/* const kontaktModal = new bootstrap.Modal(
+  document.getElementById('kontakt-modal')
+); */
+
+// kontaktModal.toggle();
+
 updateCount();
 loadQuestion();
 
@@ -91,11 +99,18 @@ function finish() {
   //sessionStorage.setItem("types", JSON.stringify(types));
 
   if (answers[answers.length - 1] == 1) {
-    referenceButton.href = 'https://itavisen.no';
-    finishModal.toggle();
+    resultModalElm.children[0].id = 'kontakt-modal';
+    resultModal.toggle();
   } else {
-    referenceButton.href = 'https://dagbladet.no';
-    finishModal.toggle();
+    resultModalElm.querySelector('#kontakt-btn').style = 'display: none';
+    resultModalElm.querySelector('#modal-top-text').innerHTML =
+      'Vi anbefaler deg å kontakte banken din i forbindelse med investeringer i aksjer og fond';
+    resultModalElm.querySelector('#modal-middle-text').innerHTML =
+      'Dette er punkter vi mener du har forbedringspotensiale på';
+    resultModalElm.querySelector('#modal-top-image').src =
+      'icons/farger/savings-pig-outline.png';
+
+    resultModal.toggle();
   }
   //document.querySelector("#question-div").style.display = "none"
   //document.querySelector("#chart-div").style.display = "block"
@@ -131,5 +146,15 @@ function updateProgress(i, currentPercent, addingPercentage) {
       progressBar.style = 'width: 100%';
     }
   }, 20);
+}
+
+function setModalSuggestions(isDefault) {
+  if (isDefault) {
+    const potensials = document.querySelector('#default-modal #potensials');
+  } else {
+    const potensials = document.querySelector('#kontakt-modal #potensials');
+  }
+
+  console.log(potensials);
 }
 //types = JSON.parse(sessionStorage.getItem("types"))
