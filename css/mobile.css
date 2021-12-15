@@ -14,3 +14,25 @@
 #question-buttons {
     margin-top: 5rem !important;
 }
+
+.modal-body #wrapper {
+    font-size: 0.75rem !important;
+    padding: 0 !important;
+}
+
+.resultater-top {
+    height: 6rem !important;
+}
+
+.resultater-top #potensials {
+    height: 8rem !important;
+}
+
+.resultater-top #potensials {
+    height: 2rem !important;
+}
+
+.resultater-bottom a {
+    font-size: 0.75rem !important;
+    padding: 0.5rem !important;
+}
