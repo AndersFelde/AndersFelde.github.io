@@ -27,18 +27,18 @@
                             du en klar plan for hvordan verdiene skal videreføres til neste generasjon?</p>
                         <div class="w-75 question-content card-text d-flex justify-content-between">
                             <button onclick="nextQuestion(0)" id="no-button" type="button" class="btn btn-danger">
-                                <span class="inline-icon material-icons">
+                                <!-- <span class="inline-icon material-icons">
                                     west
-                                </span>
+                                </span> -->
                                 Nei
                             </button>
                             <!--                           BUG: Skip er egt samme som å svare nei       -->
                             <button type="button" onclick="nextQuestion(-1)" id="question-skip-btn" class="btn btn-secondary">Skip</button>
                             <button onclick="nextQuestion(1)" id="yes-button" type="button" class="btn btn-success">
                                 Ja
-                                <span class="inline-icon material-icons">
+                                <!-- <span class="inline-icon material-icons">
                                     east
-                                </span>
+                                </span> -->
 
                             </button>
                         </div>
@@ -59,8 +59,8 @@
                         <div class="resultater-top d-flex ">
                             <div id="text" class="d-flex flex-column">
                                 <div>
-                                    <p id="modal-top-text">Vi har et ønske om å ta kontakt med
-                                        deg i forbindelse med rådgivning.</p>
+                                    <p id="modal-top-text">AlphaSpar kan hjelpe deg med alle punktene under.
+                                        Trykk på kontaktknappen for et hyggelig møte på Teams, telefon eller fysisk på Gjøvikkontoret.</p>
 
                                 </div>
                                 <div>
@@ -73,7 +73,7 @@
                             </div>
                         </div>
                         <div class="resultater-middle d-flex flex-column align-items-stretch">
-                            <div id="modal-middle-text">Disse punktene kan du få rådgivning på</div>
+                            <div id="modal-middle-text">Disse punktene hjelper vi deg med</div>
                             <div id="potensials" class="d-flex flex-column justify-content-evenly">
                                 <div id="potensial-1"><img id="potensial-image" src="icons/farger/skatt.png"><span id="potensial-span">Skatt</span></div>
                                 <!-- <div id="potensial-2"><img src="icons/farger/barekraft.png"><span>Bærekraft</span></div>

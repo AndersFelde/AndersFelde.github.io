@@ -1,60 +1,58 @@
 .progress-div {
-    width: 16rem !important;
-    margin: 2rem auto 0 auto !important;
+  width: 16rem !important;
+  margin: 2rem auto 0 auto !important;
 }
 
 .quiz-card {
-    width: 17rem !important;
+  width: 17rem !important;
 }
 
 #question-body {
-    height: 17rem !important;
+  height: 17rem !important;
 }
 
 #question-buttons {
-    margin-top: 5rem !important;
+  margin-top: 5rem !important;
 }
 
 .modal-body #wrapper {
-    font-size: 0.75rem !important;
-    padding: 0 !important;
+  font-size: 0.75rem !important;
+  padding: 0 !important;
 }
 
 .resultater-top {
-    height: 6rem !important;
+  /* height: 6rem !important; */
 }
 
 .resultater-bottom a,
 #kontakt-modal .resultater-top a {
-    font-size: 0.75rem !important;
-    padding: 0.5rem !important;
+  font-size: 0.75rem !important;
+  padding: 0.5rem !important;
 }
 
-.resultater-middle,
+/* .resultater-middle,
 .resultater-bottom {
-    margin-top: 0.5rem !important;
-}
+  margin-top: 0.5rem !important;
+} */
 
 #kontakt-modal .resultater-top img {
-    width: 100% !important;
-    margin-top: 0 !important;
-    margin-left: 0 !important;
+  width: 100% !important;
+  margin-top: 0 !important;
+  margin-left: 0 !important;
 }
 
 /* #kontakt-modal .resultater-middle #potensials {
     height: 8rem !important;
 } */
 
-#kontakt-modal .resultater-middle {
-    margin-top: 0 !important;
+/* #kontakt-modal .resultater-middle {
+  margin-top: 0 !important;
 }
 
 #kontakt-modal .resultater-bottom {
-    margin-top: 0.6rem !important
-}
-
-
+  margin-top: 0.6rem !important;
+} */
 
 #kontakt-modal .resultater-bottom .text {
-    width: 12rem !important;
+  width: 12rem !important;
 }

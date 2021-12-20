@@ -1,160 +1,157 @@
 @font-face {
-    font-family: NexaLight;
-    src: url('fonts/NexaLight.otf');
+  font-family: NexaLight;
+  src: url("fonts/NexaLight.otf");
 }
 
 @font-face {
-    font-family: NexaBold;
-    src: url('fonts/NexaBold.otf');
+  font-family: NexaBold;
+  src: url("fonts/NexaBold.otf");
 }
 
 * {
-    font-family: NexaLight;
+  font-family: NexaLight;
 }
 
 .quiz-question-flex {
-    margin-top: 1%;
+  margin-top: 1%;
 }
 
 .quiz-card {
-    width: 30rem;
+  width: 30rem;
 }
 
 #question-image {
-    display: block;
-    margin: auto;
-    width: 40%;
-    bottom: 0;
+  display: block;
+  margin: auto;
+  width: 40%;
+  bottom: 0;
 }
 
-
 .question-text {
-    line-height: 1.5rem;
-    height: 4rem;
+  line-height: 1.5rem;
+  height: 4rem;
 }
 
 .question-thumbnail {
-    width: 20%;
+  width: 20%;
 }
 
 #question-body {
-    padding: 0 1.5rem 1.5rem 1.5rem;
+  padding: 0 1.5rem 1.5rem 1.5rem;
 }
 
 .question-content {
-    margin-top: 5%;
+  margin-top: 5%;
 }
 
 .inline-icon {
-    vertical-align: bottom;
-    font-size: 19px !important;
+  vertical-align: bottom;
+  font-size: 19px !important;
 }
 
-
 .progress-div {
-    width: 30rem;
-    display: block;
-    margin: 3rem auto 0 auto;
-    text-align: center;
+  width: 30rem;
+  display: block;
+  margin: 3rem auto 0 auto;
+  text-align: center;
 }
 
 .shadow-lg,
 .shadow {
-    border-radius: 2.25em !important;
+  border-radius: 2.25em !important;
 }
 
 .quiz-card {
-    border-radius: 2.25em !important;
+  border-radius: 2.25em !important;
 }
 
 .modal-body #wrapper {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .resultater-top {
-    height: 8rem;
+  /* height: 8rem; */
 }
 
 .resultater-top img {
-    width: 100%;
-    margin-top: -1.5rem;
-    margin-left: 1rem;
-    /* display: block; */
-    /* margin: auto; */
+  width: 100%;
+  margin-top: -1.5rem;
+  margin-left: 1rem;
+  /* display: block; */
+  /* margin: auto; */
 }
 
 .resultater-top #text {
-    width: 250%;
+  width: 250%;
 }
 
-.resultater-middle {
-    width: 100%;
-    margin-top: 1rem;
+.resultater-middle,
+.resultater-bottom {
+  width: 100%;
+  margin-top: 1rem;
 }
 
 .resultater-middle #potensials {
-    /* height: 10rem; */
-    margin-left: 1rem;
+  /* height: 10rem; */
+  margin-left: 1rem;
 }
 
 .resultater-middle img {
-    height: 2.5rem;
+  height: 2.5rem;
 }
 
 .resultater-middle span {
-    margin-left: 0.5rem;
-}
-
-.resultater-bottom {
-    width: 100%;
-    margin-top: 1rem;
+  margin-left: 0.5rem;
 }
 
 .resultater-bottom #text {
-    width: 11rem;
+  width: 11rem;
 }
 
 .resultater-bottom #img-div {
-    width: 15rem;
+  width: 15rem;
 }
 
 .resultater-bottom img {
-    width: 100%;
+  width: 100%;
 }
 
 .resultater-bottom #btn {
-    margin-top: 1rem;
-
+  margin-top: 1rem;
 }
 
 .modal-backdrop {
-    opacity: 0 !important;
+  opacity: 0 !important;
 }
 
 #kontakt-modal .resultater-top {
-    height: 10rem !important;
+  /* height: 10rem !important; */
 }
 
 #kontakt-modal .resultater-top img {
-    width: 90% !important;
+  width: 90% !important;
 }
 
 .modal a {
-    background-color: #094e5c;
-    border-color: #094e5c;
+  background-color: #094e5c;
+  border-color: #094e5c;
 }
 
 #kontakt-modal a {
-    background-color: #817D9D !important;
-    border-color: #817D9D !important;
+  background-color: #817d9d !important;
+  border-color: #817d9d !important;
 }
 
 .modal a:hover {
-    background-color: #094e5c;
-    border-color: #094e5c;
+  background-color: #094e5c;
+  border-color: #094e5c;
 }
 
 #kontakt-modal a:hover {
-    background-color: #817D9D !important;
-    border-color: #817D9D !important;
+  background-color: #817d9d !important;
+  border-color: #817d9d !important;
+}
+
+.modal-dialog {
+  max-width: 540px !important;
 }
