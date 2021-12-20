@@ -69,10 +69,6 @@
   padding: 1rem;
 }
 
-.resultater-top {
-  /* height: 8rem; */
-}
-
 .resultater-top img {
   width: 100%;
   margin-top: -1.5rem;
@@ -122,10 +118,6 @@
 
 .modal-backdrop {
   opacity: 0 !important;
-}
-
-#kontakt-modal .resultater-top {
-  /* height: 10rem !important; */
 }
 
 #kontakt-modal .resultater-top img {
