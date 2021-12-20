@@ -154,17 +154,13 @@ function updateProgress(i, currentPercent, addingPercentage) {
 
 function setModalSuggestions() {
   const potensials = document.querySelector("#potensials");
-  console.log(potensials);
-  console.log(answers);
 
   var amountOfPotensials = 0;
 
   for (var i = 0; i < answers.length; i++) {
-    console.log(answers[i]);
     if (answers[i] == 0) {
       amountOfPotensials += 1;
       var clone = potensials.children[0].cloneNode(true);
-      console.log(clone);
       clone.querySelector("img").src =
         "icons/farger/" + questionTypes[i] + ".png";
       clone.querySelector("span").innerHTML = questionTypesNice[i];
