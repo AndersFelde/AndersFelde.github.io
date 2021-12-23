@@ -6,9 +6,9 @@ const questions = [
   "Er du sikker på at du har fått gode råd fra banken når det gjelder lånerente og riktig lånestørrelse i forhold til inntekt og verdier?",
   "Har du en klar plan for hvordan verdiene skal videreføres til neste generasjon?",
   "Har du utarbeidet viktige dokumenter som dine nærmeste trenger hvis det skulle hende deg noe? (testament, fremtidsfullmakt, mm.)",
-  "Har du en investeringsstrategi for pengene dine som er tilpasset dine mål og ønsker?",
   "Vet du hvilken påvirkning investeringene din har på viktige områder som miljø, menneskerettigheter og korrupsjon?",
   "Er formuen din best mulig organisert med tanke på skatt?",
+  "Har du en investeringsstrategi for pengene dine som er tilpasset dine mål og ønsker?",
   "Har du verdier for over 1 million kroner? (Egen eiendom, bankkonto, fond og andre investeringer)",
 ];
 
