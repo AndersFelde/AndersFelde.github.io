@@ -1,41 +1,41 @@
 //questions = ["Økonomi spørsmål 1", "Familie spørsmål 1", "Barn spørsmål", "Økoonomi spørsmål 2", "Barn spørsmål 2"];
 const questions = [
-  "Har du kontroll og oversikt over verdien på alle eiendelene dine?",
-  "Føler du deg ivaretatt og fulgt opp på en god måte der du har pengene din idag?",
-  "Har du tatt økonomisk fornuftige valg for hvor mye penger du skal ha på bankkonto, i eiendom og i investeringer som kan gi bedre avkastning?",
-  "Er du sikker på at du har fått gode råd fra banken når det gjelder lånerente og riktig lånestørrelse i forhold til inntekt og verdier?",
-  "Har du en klar plan for hvordan verdiene skal videreføres til neste generasjon?",
-  "Har du utarbeidet viktige dokumenter som dine nærmeste trenger hvis det skulle hende deg noe? (testament, fremtidsfullmakt, mm.)",
-  "Vet du hvilken påvirkning investeringene din har på viktige områder som miljø, menneskerettigheter og korrupsjon?",
-  "Er formuen din best mulig organisert med tanke på skatt?",
-  "Har du en investeringsstrategi for pengene dine som er tilpasset dine mål og ønsker?",
-  "Har du verdier for over 1 million kroner? (Egen eiendom, bankkonto, fond og andre investeringer)",
+  'Har du kontroll og oversikt over verdien på alle eiendelene dine?',
+  'Føler du deg ivaretatt og fulgt opp på en god måte der du har pengene din idag?',
+  'Har du tatt økonomisk fornuftige valg for hvor mye penger du skal ha på bankkonto, i eiendom og i investeringer som kan gi bedre avkastning?',
+  'Er du sikker på at du har fått gode råd fra banken når det gjelder lånerente og riktig lånestørrelse i forhold til inntekt og verdier?',
+  'Har du en klar plan for hvordan verdiene skal videreføres til neste generasjon?',
+  'Har du utarbeidet viktige dokumenter som dine nærmeste trenger hvis det skulle hende deg noe? (testament, fremtidsfullmakt, mm.)',
+  'Vet du hvilken påvirkning investeringene din har på viktige områder som miljø, menneskerettigheter og korrupsjon?',
+  'Er formuen din best mulig organisert med tanke på skatt?',
+  'Har du en investeringsstrategi for pengene dine som er tilpasset dine mål og ønsker?',
+  'Har du verdier for over 1 million kroner? (Egen eiendom, bankkonto, fond og andre investeringer)',
 ];
 
 //questionTypes = ["okonomi", "familie", "barn", "okonomi", "barn"];
 const questionTypes = [
-  "oversikt",
-  "oppfolging",
-  "riktig_investert",
-  "lan",
-  "generasjonsplanlegging",
-  "viktige_dokumenter",
-  "investerings_teknologi",
-  "barekraft",
-  "skatt",
-  "total",
+  'oversikt',
+  'oppfolging',
+  'riktig_investert',
+  'lan',
+  'generasjonsplanlegging',
+  'viktige_dokumenter',
+  'barekraft',
+  'skatt',
+  'investerings_teknologi',
+  'total',
 ];
 const questionTypesNice = [
-  "Oversikt",
-  "Oppfølgning",
-  "Riktig investert?",
-  "Lån",
-  "Generasjonsplanlegging",
-  "Viktige dokumenter",
-  "Investeringer",
-  "Bærekraft",
-  "Skatt",
-  "Totalt",
+  'Oversikt',
+  'Oppfølgning',
+  'Riktig investert?',
+  'Lån',
+  'Generasjonsplanlegging',
+  'Viktige dokumenter',
+  'Bærekraft',
+  'Skatt',
+  'Investeringer',
+  'Totalt',
 ];
 
 var types = {};
@@ -51,20 +51,20 @@ const qTotal = questions.length;
 const qPercentage = 100 / qTotal;
 
 // const referenceButton = document.querySelector('#reference-button');
-const questionText = document.querySelector("#question-text");
-const questionImage = document.querySelector("#question-image");
-const questionType = document.querySelector("#question-type");
-const progressBar = document.querySelector("#questionProgress");
-const qCountElm = document.querySelector("#question-current");
-const qTotalElm = document.querySelector("#question-total");
-const qSkipBtn = document.querySelector("#question-skip-btn");
+const questionText = document.querySelector('#question-text');
+const questionImage = document.querySelector('#question-image');
+const questionType = document.querySelector('#question-type');
+const progressBar = document.querySelector('#questionProgress');
+const qCountElm = document.querySelector('#question-current');
+const qTotalElm = document.querySelector('#question-total');
+const qSkipBtn = document.querySelector('#question-skip-btn');
 qTotalElm.innerHTML = qTotal;
 
-const yesButton = document.querySelector("#yes-button");
-const noButton = document.querySelector("#no-button");
-const resultModalElm = document.querySelector("#result-modal");
+const yesButton = document.querySelector('#yes-button');
+const noButton = document.querySelector('#no-button');
+const resultModalElm = document.querySelector('#result-modal');
 const resultModal = new bootstrap.Modal(
-  document.getElementById("result-modal")
+  document.getElementById('result-modal')
 );
 /* const kontaktModal = new bootstrap.Modal(
   document.getElementById('kontakt-modal')
@@ -86,7 +86,7 @@ function nextQuestion(a) {
       return;
     }
     if (qCount == qTotal - 1) {
-      qSkipBtn.style = "visibility: hidden;";
+      qSkipBtn.style = 'visibility: hidden;';
     }
     updateCount();
     loadQuestion();
@@ -99,7 +99,7 @@ function finish() {
   //sessionStorage.setItem("types", JSON.stringify(types));
 
   if (answers[answers.length - 1] == 1) {
-    resultModalElm.children[0].id = "kontakt-modal";
+    resultModalElm.children[0].id = 'kontakt-modal';
   } else {
     updateModalInfo();
   }
@@ -112,19 +112,19 @@ function finish() {
 }
 
 function updateModalInfo() {
-  resultModalElm.querySelector("#kontakt-btn").style = "display: none";
-  resultModalElm.querySelector("#modal-top-text").innerHTML =
-    "AlphaSpars investeringsstrategi starter fra 1 million kroner. Vi anbefaler deg å kontakte banken i forbindelse med punktene under";
-  resultModalElm.querySelector("#modal-middle-text").innerHTML =
-    "Dette er punkter vi mener du har forbedringspotensiale på";
-  resultModalElm.querySelector("#modal-top-image").src =
-    "icons/farger/savings-pig-outline.png";
+  resultModalElm.querySelector('#kontakt-btn').style = 'display: none';
+  resultModalElm.querySelector('#modal-top-text').innerHTML =
+    'AlphaSpars investeringsstrategi starter fra 1 million kroner. Vi anbefaler deg å kontakte banken i forbindelse med punktene under';
+  resultModalElm.querySelector('#modal-middle-text').innerHTML =
+    'Dette er punkter vi mener du har forbedringspotensiale på';
+  resultModalElm.querySelector('#modal-top-image').src =
+    'icons/farger/savings-pig-outline.png';
 }
 
 function loadQuestion() {
   questionText.innerHTML = questions[qCount - 1];
   questionType.innerHTML = questionTypesNice[qCount - 1];
-  questionImage.src = "icons/farger/" + questionTypes[qCount - 1] + ".png";
+  questionImage.src = 'icons/farger/' + questionTypes[qCount - 1] + '.png';
 }
 
 function updateCount() {
@@ -140,20 +140,20 @@ function updateProgress(i, currentPercent, addingPercentage) {
   setTimeout(function () {
     //  call a 3s setTimeout when the loop is called
     progressBar.style =
-      "width: " + String(currentPercent + addingPercentage * i) + "%";
+      'width: ' + String(currentPercent + addingPercentage * i) + '%';
     i++;
     setTimeout(function () {}, 500);
     if (i < 10) {
       //  if the counter < 10, call the loop function
       updateProgress(i, currentPercent, addingPercentage);
     } else if (qCount == qTotal) {
-      progressBar.style = "width: 100%";
+      progressBar.style = 'width: 100%';
     }
   }, 20);
 }
 
 function setModalSuggestions() {
-  const potensials = document.querySelector("#potensials");
+  const potensials = document.querySelector('#potensials');
 
   var amountOfPotensials = 0;
 
@@ -161,18 +161,18 @@ function setModalSuggestions() {
     if (answers[i] == 0) {
       amountOfPotensials += 1;
       var clone = potensials.children[0].cloneNode(true);
-      clone.querySelector("img").src =
-        "icons/farger/" + questionTypes[i] + ".png";
-      clone.querySelector("span").innerHTML = questionTypesNice[i];
+      clone.querySelector('img').src =
+        'icons/farger/' + questionTypes[i] + '.png';
+      clone.querySelector('span').innerHTML = questionTypesNice[i];
       potensials.appendChild(clone);
     }
   }
 
-  potensials.children[0].style = "display: none;";
+  potensials.children[0].style = 'display: none;';
 
   if (amountOfPotensials == 0) {
-    document.querySelector(".resultater-middle").style =
-      "display: none !important;";
+    document.querySelector('.resultater-middle').style =
+      'display: none !important;';
   }
 }
 //types = JSON.parse(sessionStorage.getItem("types"))
